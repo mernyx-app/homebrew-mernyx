@@ -23,7 +23,7 @@ After the tap is added, `brew install --cask mernyx` works on its own — Homebr
 falls back to this tap for the `mernyx` token.
 
 <p align="center">
-  <img src="assets/app-window.png" alt="Mernyx — source, canvas and properties side by side" width="100%">
+  <img src="assets/app-window.webp" alt="Mernyx — source, canvas and properties side by side" width="100%">
 </p>
 
 ## What you get
