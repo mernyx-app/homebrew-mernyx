@@ -22,6 +22,10 @@ third-party tap — without it, `brew install` refuses with "Refusing to load ca
 After the tap is added, `brew install --cask mernyx` works on its own — Homebrew
 falls back to this tap for the `mernyx` token.
 
+<p align="center">
+  <img src="assets/app-window.png" alt="Mernyx — source, canvas and properties side by side" width="100%">
+</p>
+
 ## What you get
 
 This cask installs the **standalone (direct) build**, which uses a licence key
