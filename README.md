@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner-1x.png" alt="Mernyx — native Mermaid editor for macOS" width="100%">
+  <img src="assets/banner.svg" alt="Mernyx — native Mermaid editor for macOS" width="100%">
 </p>
 
 # Homebrew tap for Mernyx
