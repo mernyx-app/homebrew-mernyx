@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/banner-1x.png" alt="Mernyx — native Mermaid editor for macOS" width="100%">
+</p>
+
 # Homebrew tap for Mernyx
 
 [Mernyx](https://mernyx.com) — native Mermaid editor for macOS. Move a node and

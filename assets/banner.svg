@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="954" height="300" viewBox="0 0 954 300" role="img" aria-label="Mernyx — native Mermaid editor for macOS">
+  <title>Mernyx — native Mermaid editor for macOS</title>
+  <desc>34 diagram families. macOS 14 or later. Signed and notarised builds.</desc>
+
+  <defs>
+    <!-- 品牌渐变：取自站点 public/mernyx-mark.svg 与 public/favicon.svg（同一份） -->
+    <linearGradient id="brand" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="rgb(250,69,31)"/>
+      <stop offset="1" stop-color="rgb(208,75,44)"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="954" height="300" fill="url(#brand)"/>
+
+  <!--
+    App 标记：**直接内联站点 public/favicon.svg 的那份矢量**（同一 artwork、同一圆角
+    mask rx=224 = 22%），只做等比缩放与位移。
+
+    ⚠️ **不要手绘这份图形。** 它是「一个 239×239 的圆角矩形 rx=60 旋转 45°」
+    ——手绘成多边形会歪（菱形上下斜率不等），而站点自己的 favicon.svg 注释里
+    就记着同一类错误：「its diamond ran 27 units lower than the app icon's」。
+
+    ⚠️ **图标底色换成半透明白**：banner 背景用的就是品牌渐变本身，图标若也用同一
+    渐变会整块融掉、只剩白色图形漂着 ⇒ 用白垫底 + 描边，把轮廓留住。
+  -->
+  <g transform="translate(56 55) scale(0.19)">
+    <defs>
+      <clipPath id="squircle">
+        <rect width="1000" height="1000" rx="224"/>
+      </clipPath>
+    </defs>
+    <g clip-path="url(#squircle)">
+      <rect width="1000" height="1000" fill="rgb(255,255,255)" opacity="0.14"/>
+      <g fill="rgb(255,255,255)">
+        <rect x="233" y="452" width="38" height="193"/>
+        <path d="M0 0L38 0L38 193L0 193L0 0Z" transform="matrix(0,-1,1,0,346.001,767)"/>
+        <rect x="133" y="240" width="239" height="239" rx="60"/>
+        <rect x="0" y="0" width="239.024033" height="239.024033" rx="60"
+              transform="matrix(-0.707107,-0.707107,0.707107,-0.707107,252,916.997)"/>
+        <rect x="521" y="628" width="239" height="239" rx="60"/>
+      </g>
+    </g>
+    <rect x="0" y="0" width="1000" height="1000" rx="224" fill="none" stroke="rgb(255,255,255)" stroke-opacity="0.4" stroke-width="10"/>
+  </g>
+
+  <!--
+    三段式：**图标 │ 名字+定位 │ 事实 chip**，两处间隔都是 56、左右边距也是 56。
+
+    ⚠️ **画布宽 984 是算出来的**，不是拍的：图标 220 + 56 + 文字块 342（副标题 @24
+    的实测宽）+ 56 + chip 198（最宽那个 +32 padding）+ 左右各 56 = 984。
+    ⇒ 之前 1280 宽时中间空 330px，就是「按 1280 排版却只装了 984 的内容」。
+
+    ⚠️ **不写安装命令** —— README 正文开头就有那三步，banner 再抄一遍是重复且杂乱。
+  -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif">
+    <text x="302" y="142" font-size="64" font-weight="700" fill="#ffffff" letter-spacing="-1.4">Mernyx</text>
+    <text x="302" y="190" font-size="24" font-weight="500" fill="#ffffff" opacity="0.9">Native Mermaid editor for macOS</text>
+  </g>
+
+  <!-- 事实 chip：竖排三个，宽度按文字实测（19px 系统字 + 左右各 16 padding） -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif" font-size="19" font-weight="500">
+    <g transform="translate(700 64)">
+      <rect x="0" y="0" width="198" height="44" rx="22" fill="rgb(255,255,255)" opacity="0.15"/>
+      <text x="99" y="29" text-anchor="middle" fill="#ffffff" opacity="0.95">34 diagram families</text>
+    </g>
+    <g transform="translate(700 122)">
+      <rect x="0" y="0" width="183" height="44" rx="22" fill="rgb(255,255,255)" opacity="0.15"/>
+      <text x="91.5" y="29" text-anchor="middle" fill="#ffffff" opacity="0.95">macOS 14 or later</text>
+    </g>
+    <g transform="translate(700 180)">
+      <rect x="0" y="0" width="192" height="44" rx="22" fill="rgb(255,255,255)" opacity="0.15"/>
+      <text x="96" y="29" text-anchor="middle" fill="#ffffff" opacity="0.95">Signed &amp; notarised</text>
+    </g>
+  </g>
+</svg>
