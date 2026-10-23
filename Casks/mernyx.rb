@@ -13,7 +13,7 @@ cask "mernyx" do
   end
 
   auto_updates true
-  depends_on macos: ">= 14.0"
+  depends_on macos: :sonoma
 
   app "Mernyx.app"
 
