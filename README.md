@@ -7,8 +7,13 @@ the source follows — no WebView, no JavaScript bridge, no Electron.
 
 ```sh
 brew tap mernyx-app/mernyx
+brew trust --tap mernyx-app/mernyx
 brew install --cask mernyx
 ```
+
+The `brew trust` step is required by Homebrew 7 before it will load a cask from a
+third-party tap — without it, `brew install` refuses with "Refusing to load cask
+… from untrusted tap".
 
 After the tap is added, `brew install --cask mernyx` works on its own — Homebrew
 falls back to this tap for the `mernyx` token.
