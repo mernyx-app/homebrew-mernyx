@@ -5,7 +5,7 @@ cask "mernyx" do
   url "https://releases.mernyx.com/Mernyx-#{version}.dmg"
   name "Mernyx"
   desc "Native Mermaid editor for diagramming"
-  homepage "https://mernyx.com"
+  homepage "https://mernyx.com/"
 
   livecheck do
     url "https://mernyx.com/updates/appcast.xml"
@@ -17,6 +17,15 @@ cask "mernyx" do
 
   app "Mernyx.app"
 
+  uninstall quit: "com.mernyx.app"
+
+  zap trash: [
+    "~/Library/Caches/com.mernyx.app",
+    "~/Library/Containers/com.mernyx.app",
+    "~/Library/Preferences/com.mernyx.app.plist",
+    "~/Library/Saved Application State/com.mernyx.app.savedState",
+  ]
+
   caveats <<~EOS
     This installs the standalone (direct) build, which uses a licence key
     instead of the Mac App Store receipt.
@@ -26,13 +35,4 @@ cask "mernyx" do
     Store purchases do not carry over to this build, and App Store receipts
     are not read by it.
   EOS
-
-  uninstall quit: "com.mernyx.app"
-
-  zap trash: [
-    "~/Library/Containers/com.mernyx.app",
-    "~/Library/Preferences/com.mernyx.app.plist",
-    "~/Library/Saved Application State/com.mernyx.app.savedState",
-    "~/Library/Caches/com.mernyx.app",
-  ]
 end
